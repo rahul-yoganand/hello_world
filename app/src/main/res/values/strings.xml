@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">hello_world</string>
+    <string name="login_name"> enter login id</string>
+</resources>
