@@ -1,5 +1,6 @@
 package com.example.hello_world
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,12 +25,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun welcome(view: View) {
-
+        var alpha=test(10,20)-20
+        sname.setText("Messi" + alpha)
         var gname = lname.text.toString()
-        var alpha=test(10,20)
-        sname.setText(""+alpha)
+        var homeactivity :Intent = Intent(this,login_success::class.java)
+        homeactivity.putExtra("loname",gname)
+        startActivity(homeactivity)
 
-        Toast.makeText(this, "welcome $gname ", Toast.LENGTH_SHORT).show()
+
 
     }
 
