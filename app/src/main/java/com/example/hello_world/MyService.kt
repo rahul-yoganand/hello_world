@@ -16,11 +16,12 @@ class MyService : Service() {
 //    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 //        return super.onStartCommand(intent, flags, startId)
 //    }
-    //override fun onBind(intent: Intent): IBinder {
-   // }
+    override fun onBind(intent: Intent): IBinder? {
+        return null
+   }
 
     override fun onDestroy() {
         super.onDestroy()
-        Toast.makeText(this,"Service Created",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"Service Destroyed",Toast.LENGTH_SHORT).show()
     }
 }

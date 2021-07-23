@@ -7,12 +7,38 @@
     tools:context=".ServiceActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnStart"
+        android:onClick="handleServices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="96dp"
+        android:text="start service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:onClick="handleServices"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="45dp"
+        android:text="stop service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+    <Button
+        android:id="@+id/btnBind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="67dp"
+        android:onClick="handleServices"
+        android:text="bind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_world">
         <service
-            android:name=".MyService"
-            android:enabled="false"
-            android:exported="false"></service>
+            android:name=".LocalService"></service>
+        <service
+            android:name=".MyService"></service>
 
         <activity android:name=".ServiceActivity">
             <intent-filter>
