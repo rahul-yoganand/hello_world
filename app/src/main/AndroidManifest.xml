@@ -3,7 +3,9 @@
     package="com.example.hello_world">
 
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <application
         android:allowBackup="true"
@@ -12,21 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_world">
-        <receiver android:name=".smsReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
-            </intent-filter>
-        </receiver>
-        <activity android:name=".RecyclerActivity">
+        <service
+            android:name=".MyService"
+            android:enabled="false"
+            android:exported="false"></service>
+
+        <activity android:name=".ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UiElementsDemo"></activity>
-        <activity android:name=".login_success" />
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
