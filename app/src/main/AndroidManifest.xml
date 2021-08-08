@@ -18,13 +18,15 @@
             </intent-filter>
         </receiver>
         <activity android:name=".RecyclerActivity">
+
+        </activity>
+        <activity android:name=".UiElementsDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UiElementsDemo"></activity>
         <activity android:name=".login_success" />
         <activity android:name=".MainActivity"></activity>
     </application>
